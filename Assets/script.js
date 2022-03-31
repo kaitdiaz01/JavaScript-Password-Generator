@@ -9,10 +9,10 @@ const lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "
 
 
 function userSelected () {
-      var userInput = 
+      var userInput = ()
 
-  if (userInput < 8 && passwordLength > 128) {
-    window.alert ("Password length must be at least 8 characters.");
+  if (window.prompt ("How many characters would you like your password to contain?")) && userInput < 8 && passwordLength > 128) {
+      window.alert("Password must be between 8 and 128 characters.")
  
   } else if (userInput == specialChars) {
     window.confirm ("Click OK if you want to include special characters.");
@@ -109,7 +109,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// window.prompt ("How many characters would you like your password to contain?");
+
 
 
 
