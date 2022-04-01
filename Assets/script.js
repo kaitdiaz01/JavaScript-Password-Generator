@@ -47,8 +47,8 @@ function userSelected () {
       window.alert("You must choose at least one Character."); 
       return;
     }
-
 return userChoices;
+
 };
 
 
@@ -59,23 +59,20 @@ function randomSelected () {
  var storeRandomLetters = [];
 
   for (var i = 0; i < passwordLength; i++) {
-    var randomNum = randomChoice[Math.floor(Math.random()*randomChoice.length)];
+    var randomNum = randomChoice[Math.floor(Math.random() * passwordLength.length)];
     storeRandomLetters = storeRandomLetters.concat(randomChoice[randomNum]);
   }
- 
-//  for (var i = 0; i < randomChoice.length; i++) {
-//    //picking a random number from array 
-//    var randomNum = randomChoice[Math.floor(Math.random()*randomChoice.length)];
-//   storeRandomLetters = storeRandomLetters.concat(randomChoice[randomNum]);
 
- storeRandomLetters = storeRandomLetters.join("");
+  storeRandomLetters = storeRandomLetters.join("");
+  console.log(storeRandomLetters);
 return storeRandomLetters;
+  
 }
+
 
 //function to generate the password from user input 
 function generatePassword () {
-  var storePassword = randomSelected();
-  return storePassword;
+   return randomSelected();
   
 
   
